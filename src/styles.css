@@ -1,1 +1,40 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 /* You can add global styles to this file, and also import other style files */
+
+/* Define CSS variables for the color palette */
+:root {
+  --color-background: #f4f7f6; /* Very light neutral tone */
+  --color-text-dark: #212121;
+  --color-text-muted: #9CA3AF; /* For completed tasks */
+  --color-accent: #7C3AED; /* Violet accent */
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+}
+
+.task-item.completed {
+  opacity: 0.6; /* Subtle fade effect for completed tasks */
+  /* font-style: italic; */ /* Removed italic as it's not in the brief */
+  text-decoration: line-through; /* Ensure strikethrough is applied */
+  color: var(--color-text-muted); /* Apply muted color to completed text */
+}
+
+/* Custom styling for a circular checkbox */
+.form-check-input {
+  border-radius: 50%; /* Make the checkbox circular */
+  cursor: pointer;
+}
+
+/* Style for the checked state of the circular checkbox */
+.form-check-input:checked {
+  background-color: var(--color-accent); /* Use accent color for checked state */
+  border-color: var(--color-accent);
+}
+
+/* Add some vertical space between task items */
+.list-group-item {
+  margin-bottom: 12px; /* Increased spacing slightly */
+}
