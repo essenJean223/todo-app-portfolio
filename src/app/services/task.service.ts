@@ -1,5 +1,5 @@
 import { Injectable, signal, computed } from '@angular/core';
-import { Task } from '/home/user/todo-app/src/app/task'; // Use absolute path
+import { Task } from '../task';
 
 @Injectable({
   providedIn: 'root'
